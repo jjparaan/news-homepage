@@ -11,12 +11,12 @@ const App = () => {
 	const newsElements = news.map((data) => (
 		<Aside key={data.id} title={data.title} details={data.details} />
 	));
-	const itemElements = items.map((item) => {
+	const itemElements = items.map((item, index) => {
 		return (
 			<Items
 				key={item.id}
 				img={item.img}
-				serial={item.serial}
+				serial={index}
 				title={item.title}
 				details={item.details}
 			/>
